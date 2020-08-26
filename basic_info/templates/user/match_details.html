@@ -1,0 +1,55 @@
+{% include 'user/header.html'%}
+
+{% include 'user/side_bar.html'%}
+{% load static %}
+<div class="content-wrapper station-detail-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="page-main-title">
+                            <h2>Match details </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+           <div class="col-lg-12">
+               <div class="dashboard-notification-block dashboard-notification-big-block bg-grey text-left">
+                    <div class="station-detail-block">
+
+                        <div class="row">
+                            <div class="col-lg-6 col-6">
+                                <p> Match No: </p>
+                            </div>
+                            <div class="col-lg-6 col-6">
+                                <p> {{match.id}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-6">
+                                <p> Teams </p>
+                            </div>
+                            <div class="col-lg-6 col-6">
+                                <p> {{match}} </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-6">
+                                <p> Winner Team  </p>
+                            </div>
+                            <div class="col-lg-6 col-6">
+                                <p> {{winner}}</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+           </div>
+        </div>
+
+</div>
+{% include 'user/footer.html'%}

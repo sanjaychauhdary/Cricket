@@ -1,0 +1,48 @@
+{% load static %}
+{% load active_link_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Dashboard </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'user/css/style.css' %}">
+</head>
+<body>
+<div class="header-wrapper sec3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-3">
+                <div class="main-logo">
+                    <img height="50" src="{% static 'user/images/logo-new.png'%}">
+                </div>
+            </div>
+             <div class="col-lg-9 col-9 pull-right">
+                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav navbar-left">
+                    <li class="nav-item">
+                      <a class="nav-link {% active_link 'team_list' %}" href="{% url 'team_list' %}">Team</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link {% active_link 'matches_list' %}" href="{% url 'matches_list' %}">Match</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link {% active_link 'points_table' %}" href="{% url 'points_table' %}">Point Table</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link {% active_link 'player_history' %}" href="{% url 'player_history' %}">Player History</a>
+                    </li>
+              </ul>
+                     </div>
+                 </nav>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
